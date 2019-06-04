@@ -8,17 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello") // this is parent mapping, get rid of ambiguity between SillyController and this controller
 public class HelloWorldController {
 	
 	// need a controller method to show HTML form
-	@RequestMapping("/showForm")
+	@RequestMapping("/showForm") // sub mapping to hello, will be hello/showForm
 	public String showForm() {
 		return "helloworld-form"; // Spring MVC will add the /WEB-INF/view/helloworld-form.jsp
 	}
 	
 	// need a controller method to process the HTML form
 	// This is the HTML page that processes after you input ur data
-	@RequestMapping("/processForm")
+	@RequestMapping("/processForm") // another sub mapping to hello, will be hello/processForm
 	public String processForm() {
 		return "helloworld";
 	}
