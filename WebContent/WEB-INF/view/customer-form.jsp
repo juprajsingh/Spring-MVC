@@ -24,7 +24,7 @@
 		
 		<br><br>
 		
-		Last name (*): <form:input path"LastName"/>
+		Last name (*): <form:input path="LastName"/>
 		<form:errors path="LastName" cssClass="error" />
 	
 		<br><br>
